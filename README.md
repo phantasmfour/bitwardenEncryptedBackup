@@ -1,12 +1,12 @@
-# bitwardenEncryptedBackup
-Attempt at pulling backups without fully authenticating
+# Bitwarden Encrypted Backup Via API
 
-You can authenticated to bitwarden using the API but not fully unlock your vault with your master password.
+Using this script you are able to Authenticate to Bitwarden via the API.
+You are not fully authenticated to decrypt secrets until you provide the master password. But you are given a file similar to clients called data.json. 
+The formatting is different but you are able to take this file which contains your encrypted credentials and send it to BitwardenDecrypt
+This script BitwardenDecrypt by Gurpeet does most of the actual work. They wrote this to decrypt data.json file.
+With my script I am jsut pulling down the crednetials and then formatting them into a data.json like file.
+You can run this as a cron script and later if you need these password just decrypt them. And if that is not enough the output you get from Gurpeets script can be imported back into bitwarden to reimport your password.
 
-During this time though you are able to pull all your credentials in encrypted format. 
+I imagine this script running in cron daily overwritting the save file.
+Only issues to watch out for is if you change your API Creds. I do not have any error handling so you might not know.
 
-All you need to do is figure out how clients would decrypt this data with the master password.
-
-This seems a little bit harder than I think even though bitwarden is open source.
-
-If you can find it you can make a cool back script that does not require interaction and you master password to automate.
