@@ -8,6 +8,8 @@ But you are given a file similar to clients called data.json.
 
 The formatting is different but you are able to take this file which contains your encrypted credentials and send it to BitwardenDecrypt
 
+The Vaultwarden API returns json with the first letter of all keys capitalized. I have a second script just incase you run vaultwarden.
+
 ---
 
 This script [BitwardenDecrypt](https://github.com/GurpreetKang/BitwardenDecrypt) by Gurpeet does most of the actual work. They wrote this to decrypt data.json file. 
